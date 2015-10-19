@@ -1,0 +1,63 @@
+<div class='row text-center' ng-controller="TodosController as Todos">
+	<div class='col-sm-4 col-sm-offset-4'>
+		<h1>All Todos</h1>
+		
+		<add-todo></add-todo>
+
+		<ul class="list-group">
+			<li ng-repeat='todo in Todos.todos' ng-class="{completed: todo.is_completed}" class="list-group-item well" ng-controller="TasksController as Tasks">
+				<div class="panel-heading">
+					<h3>
+						{{todo.title}}
+						<a href='#' data-toggle='collapse' data-target='#{{todo.id}}'>Editar</a>
+						<span class='badge' ng-click="Todos.deleteTodo(todo.id)">X</span>
+					</h3>
+					
+				</div>
+				
+				<div class='collapse panel-collapse' id='{{todo.id}}'>
+              		<div class="panel-body">
+						<edit-list></edit-list>
+              		</div>
+              	</div>
+              	
+				<ul class="list-group">
+					<li ng-repeat='task in Tasks.tasks' class="list-group-item" ng-controller="CommentariesController as Commentaries">
+						
+						<p ng-class="{completed: task.is_completed}">{{task.title}}</p>
+						<input type="checkbox" ng-checked="task.is_completed" ng-change="Tasks.toggleCompleted2(task)" ng-model='task.is_completed'>
+						Marcar como terminada
+
+						<a href='#' data-toggle='collapse' data-target='#{{task.id}}'>Editar</a>
+						<span class='badge' ng-click="Tasks.deleteTask(task.id)">X</span>
+						<br>
+
+						<div class='collapse panel-collapse' id='{{task.id}}'>
+              				<div class="panel-body">
+								<task-edit></task-edit>
+              				</div>
+              			</div>
+
+              			<ul class="list-group">
+              				<li ng-repeat='comment in Commentaries.comments' class="list-group-item">
+								
+								<div class="panel-footer">
+									{{ comment.content }}
+									<span class='badge' ng-click="Commentaries.deleteComment(comment.id)">X</span>
+								</div>
+              				
+              				</li>
+              			</ul>
+              			
+						<add-comment></add-comment>
+
+					</li>
+				</ul>
+				
+				<add-task></add-task>
+				
+			</li>
+		</ul>
+
+	</div>
+</div>
