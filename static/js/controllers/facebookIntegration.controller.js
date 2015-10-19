@@ -2,7 +2,7 @@
   //Pega o nome e ID do usuário quando ele loga no Facebook e limpa seus dados
   //quando sai do sistema
   
-  angular.module("drf-angular")
+  angular.module("ToDoList")
   .controller('FacebookIntegrationController', function($rootScope, $scope, facebookUser, $http) {
     $rootScope.loggedInUser = {};
 

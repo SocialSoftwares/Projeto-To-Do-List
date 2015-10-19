@@ -1,5 +1,5 @@
 (function (){
-	angular.module("drf-angular")
+	angular.module("ToDoList")
 	.service('Commentaries', function($http, BASE_COMMENTS){
 	
 	var Commentaries = {};

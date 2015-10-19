@@ -1,5 +1,5 @@
 (function (){
-	angular.module("drf-angular")
+	angular.module("ToDoList")
 	.directive("editList", function () {
 		return {
 			restrict: "E",

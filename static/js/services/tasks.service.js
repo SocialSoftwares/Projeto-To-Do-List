@@ -1,5 +1,5 @@
 (function (){
-	angular.module("drf-angular")
+	angular.module("ToDoList")
 	.service('Tasks', function($http, BASE_TASKS){
 	
 	var Tasks = {};

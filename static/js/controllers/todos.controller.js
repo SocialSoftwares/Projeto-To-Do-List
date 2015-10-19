@@ -1,5 +1,5 @@
 (function (){
-	angular.module("drf-angular")
+	angular.module("ToDoList")
 	.controller('TodosController', function($scope, Todos, $state, $http){
 		var viewController = this;
 

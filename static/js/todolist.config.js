@@ -1,5 +1,5 @@
 (function (){
-	angular.module('drf-angular')
+	angular.module('ToDoList')
 	.config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider){
 
 	$httpProvider.defaults.xsrfCookieName = 'csrftoken';

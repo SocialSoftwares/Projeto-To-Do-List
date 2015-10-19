@@ -1,5 +1,5 @@
 (function (){
-	angular.module("drf-angular")
+	angular.module("ToDoList")
 	.controller('CommentariesController', function($scope, $state, Commentaries, $rootScope){
 		
 		var viewController = this;
