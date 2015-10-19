@@ -1,0 +1,10 @@
+.completed {
+	text-decoration: line-through;
+}
+
+.badge {
+	cursor: pointer;
+}
+body{
+	overflow-x: hidden;
+}
