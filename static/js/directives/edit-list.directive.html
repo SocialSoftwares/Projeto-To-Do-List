@@ -1,0 +1,9 @@
+<form name="EditListForm" ng-submit="Todos.toggleCompleted(todo)">
+	<fieldset class="form-group">
+		<input type="text" ng-model="todo.title" placeholder="new title" class='form-control'>
+	</fieldset>
+							
+	<fieldset class="form-group">
+		<button class="btn btn-primary" ng-disabled="!todo.title">Edit List</button>
+	</fieldset>
+</form>
