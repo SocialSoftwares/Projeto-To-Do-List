@@ -1,3 +1,3 @@
 (function (){
-  angular.module("ToDoList", ['facebookUtils'])
+  angular.module("ToDoList", ['facebookUtils', 'ui.router'])
 })();
