@@ -8,8 +8,8 @@
 		return $http.get(BASE_TASKS);
 	};
 
-	Tasks.update = function(updatedTodo){
-		return $http.put(BASE_TASKS + updatedTodo.id, updatedTodo);
+	Tasks.update = function(updatedTask){
+		return $http.put(BASE_TASKS + updatedTask.id, updatedTask);
 	};
 
 	Tasks.delete = function(id){
