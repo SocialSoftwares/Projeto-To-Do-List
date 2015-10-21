@@ -6,8 +6,8 @@
 		viewController.tasks = {};
 		viewController.newTask = {};
 
-		this.addTask = function(todoId) {
-			viewController.newTask.todo = todoId;
+		this.addTask = function(taskId) {
+			viewController.newTask.todo = taskId;
 			Tasks.addOne(viewController.newTask)
 				.then(function(res){
 					// redirect to homepage once added
@@ -15,7 +15,7 @@
 				});
 		};
 
-		this.toggleCompleted2 = function(task) {
+		this.updateTask = function(task) {
 			Tasks.update(task);
 		};
 
